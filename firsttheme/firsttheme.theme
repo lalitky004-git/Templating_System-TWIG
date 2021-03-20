@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Functions to support theming in the Business theme.
+ */
+;
+
+use Drupal\Component\Utility\page;
+
+function firsttheme_preprocess_page(&$variables) {
+  $variables['attributes']['class'][] = 'preprocessclass';
+}
+// function firsttheme_preprocess_message(&$variables) {
+//     $owner_name = $variables['message']->field_node_reference->entity->getOwner()->getUsername();
+//     $variables['owner_name'] = $owner_name;
+//   }
+
+// function firsttheme_preprocess_page(&$variables){
+//   $node = \Drupal::request()->attributes->get('node');
+//   if (!is_null($node)) {
+//     $uid = $node->getOwnerId();
+//     $user = \Drupal\user\Entity\User::load($uid);
+//    if (!is_null($user))
+//     { $username = $user->getDisplayName();
+//      $variables['username'] = $username;
+//   } }
+// }
